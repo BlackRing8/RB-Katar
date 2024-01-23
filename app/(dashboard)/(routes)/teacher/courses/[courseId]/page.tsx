@@ -1,4 +1,4 @@
-const couserIdPage = () => {
+const CouseIdPage = () => {
     return ( 
         <div>
             course id page
@@ -6,4 +6,4 @@ const couserIdPage = () => {
      );
 }
  
-export default couserIdPage;
+export default CouseIdPage;
