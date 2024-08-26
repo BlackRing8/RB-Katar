@@ -5,6 +5,8 @@ import { auth } from "@clerk/nextjs";
 import { LayoutDashboard } from "lucide-react";
 import { redirect } from "next/navigation";
 import { TitleForm } from "./_components/title-form";
+import { DescriptionForm } from "./_components/description-form";
+import { ImageForm } from "./_components/image-form";
 
 const CouseIdPage = async ({ params }: { params: { courseId: string } }) => {
   const { userId } = auth();
@@ -32,7 +34,7 @@ const CouseIdPage = async ({ params }: { params: { courseId: string } }) => {
 
   return (
     <>
-      <div className="p-6">
+      <div className="p-6 pb-24">
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-y-2">
             <h1 className="text-2xl font-medium">Materi setup</h1>
@@ -46,6 +48,8 @@ const CouseIdPage = async ({ params }: { params: { courseId: string } }) => {
               <h2 className="text-xl">Sesuaikan Materi Yang ingin kamu buat</h2>
             </div>
             <TitleForm initialData={course} courseId={course.id} />
+            <DescriptionForm initialData={course} courseId={course.id} />
+            <ImageForm initialData={course} courseId={course.id} />
           </div>
         </div>
       </div>
